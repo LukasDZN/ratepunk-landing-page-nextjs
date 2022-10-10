@@ -1,0 +1,23 @@
+.container {
+  font-size: 1.25rem;
+  margin: 2rem 0 0 2rem;
+}
+
+.menu {
+  & {
+    padding-bottom: 1.5rem;
+  }
+  & li {
+    & {
+      margin-top: 1.25rem;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #4eb3e3;
+      transition: 0.3s ease;
+    }
+    &:active {
+      color: lighten(#4eb3e3, 40%);
+    }
+  }
+}

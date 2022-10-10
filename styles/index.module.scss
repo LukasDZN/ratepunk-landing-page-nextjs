@@ -1,0 +1,278 @@
+$sectionBottomBorder: 1px solid #1f343e;
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+.outline {
+  outline: 1px solid #1f343e;
+}
+
+.navbarSection {
+  & {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+  }
+}
+
+.navbarSectionDesktop {
+  border-bottom: $sectionBottomBorder;
+}
+
+.mainSection {
+  border-bottom: $sectionBottomBorder;
+  background-color: #f8cc5d;
+}
+
+.appStoreSection {
+  border-bottom: $sectionBottomBorder;
+  background-color: #45565e;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainFlexContainer {
+  @extend .flex;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+}
+
+.emailFormContainer {
+  @extend .flex;
+  flex: 1;
+  min-width: 300px;
+}
+
+.logoAndTextContainer {
+  @extend .flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+}
+
+.logoAndTextItem {
+  & {
+    @extend .flex;
+    column-gap: 5%;
+    @media only screen and (max-width: 481px) {
+      flex-direction: column;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+  &:nth-child(2) {
+    @media only screen and (max-width: 481px) {
+      flex-flow: column-reverse !important;
+    }
+  }
+  & p {
+    &:first-child {
+      color: #4eb3e3;
+      word-spacing: 1.6px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+    &:nth-child(2) {
+      color: #1f343e;
+      font-family: Caveat Brush, Regular;
+      font-size: 2rem;
+      line-height: 0.5rem;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      color: #1f343e;
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.envelopeIcon {
+  width: 40%;
+}
+
+.genericStepImage {
+  min-width: 80px;
+}
+
+.collectCoinsIcon {
+  width: 85%;
+}
+
+.voucherIcon {
+  width: 60%;
+}
+
+.appStoreContainer {
+  & {
+    @extend .flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+    font-size: 1.25rem;
+  }
+  & .rating {
+    & {
+      color: white;
+    }
+    & span {
+      margin: 0 1rem;
+      word-spacing: -0.3rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.appStoreContainerItem {
+  & {
+    @extend .flex;
+    margin: 2%;
+    padding: 0.3rem 3rem 1rem 1.5rem;
+    min-width: 280px;
+    outline: 1px solid #1f343e;
+    border-radius: 16px;
+    color: white;
+    column-gap: 0.8rem;
+  }
+  &:hover {
+    background-color: lighten(#1f343e, 10%);
+    outline-color: white;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: lighten(#1f343e, 30%);
+  }
+  & div {
+    & {
+      @extend .flex;
+      flex-direction: column;
+      margin: 0;
+      align-items: flex-start;
+    }
+    & p {
+      margin: 0;
+    }
+    & p:nth-child(2) {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.footerSection {
+  border-bottom: $sectionBottomBorder;
+  background-color: #f8f4f9;
+  color: #1f343e;
+}
+
+.footerContainer {
+  & {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: 10%;
+    padding: 4rem 0;
+  }
+  & h2 {
+    margin-top: 0;
+  }
+  > div {
+    margin-bottom: 10%;
+  }
+}
+
+.footerContainerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  min-width: 280px;
+}
+
+.footerContainerDescription {
+  @extend .footerContainerItem;
+  flex: 2;
+  align-content: space-between;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.footerContainerQuickLinks {
+  & {
+    @extend .footerContainerItem;
+    flex: 1;
+    row-gap: 0.6rem;
+  }
+  & li {
+    & {
+      margin-bottom: 1rem;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #4eb3e3;
+      transition: 0.3s ease;
+    }
+    &:active {
+      color: lighten(#4eb3e3, 40%);
+    }
+  }
+}
+
+.footerContainerContact {
+  @extend .footerContainerItem;
+  flex: 1;
+  row-gap: 5rem;
+}
+
+.footerCopyright {
+  margin: 0;
+  color: #6d7a80;
+}
+
+.contactIconAndEmail {
+  & {
+    @extend .flex;
+    column-gap: 0.8rem;
+  }
+  > p {
+    margin: 0;
+  }
+}
+
+.socialIcons {
+  @extend .flex;
+  column-gap: 0.5rem;
+}
+
+.socialIcon {
+  & {
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #4eb3e3;
+    border-radius: 8px;
+    border: 1px solid #1f343e;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#4eb3e3, 10%);
+  }
+  &:active {
+    background-color: darken(#4eb3e3, 30%);
+  }
+}
