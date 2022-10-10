@@ -7,6 +7,7 @@
     "build": "next build",
     "export": "next build && next export -o docs",
     "start": "next start",
+    "deploy": "cd docs && echo \"\">.nojekyll && cd .. && git add . && git commit -m \"Auto generated commit msg: content changes\" && git push",
     "lint": "next lint",
     "prettify": "npx prettier --write ."
   },
