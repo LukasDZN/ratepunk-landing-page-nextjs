@@ -1,9 +1,8 @@
-import { SetStateAction } from 'react';
 import navbarStyles from '../styles/components/mobileMenu.module.scss';
 
 interface NavBarProps {
   mobileMenuState: boolean;
-  stateChanger: React.Dispatch<SetStateAction<boolean>>;
+  stateChanger: (newState: string) => {};
 }
 
 const MobileMenu = ({ mobileMenuState, stateChanger }: NavBarProps): JSX.Element => {
